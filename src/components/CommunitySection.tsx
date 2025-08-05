@@ -2,28 +2,43 @@ export const CommunitySection = () => {
   const communities = [
     {
       name: "IEEE Computer Society UNTELS",
-      logo: "🎓",
+      logo: "/assets/ieee-untels-logo.svg",
       description: "Universidad Nacional Tecnológica de Lima Sur",
     },
     {
       name: "IEEE CS UNI",
-      logo: "⚡",
+      logo: "/assets/ieee-uni-logo.svg",
       description: "Universidad Nacional de Ingeniería",
     },
     {
       name: "IEEE CS UNMSM",
-      logo: "🏛️",
+      logo: "/assets/ieee-unmsm-logo.svg",
       description: "Universidad Nacional Mayor de San Marcos",
     },
     {
       name: "IEEE CS UPC",
-      logo: "🚀",
+      logo: "/assets/ieee-upc-logo.svg",
       description: "Universidad Peruana de Ciencias Aplicadas",
     },
     {
       name: "IEEE CS PUCP",
-      logo: "⭐",
+      logo: "/assets/ieee-pucp-logo.svg",
       description: "Pontificia Universidad Católica del Perú",
+    },
+    {
+      name: "IEEE CS USIL",
+      logo: "/assets/ieee-usil-logo.svg",
+      description: "Universidad San Ignacio de Loyola",
+    },
+    {
+      name: "IEEE CS UTEC",
+      logo: "/assets/ieee-utec-logo.svg",
+      description: "Universidad de Ingeniería y Tecnología",
+    },
+    {
+      name: "IEEE CS ULIMA",
+      logo: "/assets/ieee-ulima-logo.svg",
+      description: "Universidad de Lima",
     },
   ];
 
@@ -52,8 +67,12 @@ export const CommunitySection = () => {
                 style={{ width: "280px" }}
               >
                 <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth text-center group-hover:scale-105">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-2xl flex items-center justify-center text-3xl group-hover:bg-primary/30 transition-colors">
-                    {community.logo}
+                  <div className="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-2xl flex items-center justify-center group-hover:bg-primary/30 transition-colors p-2">
+                    <img 
+                      src={community.logo} 
+                      alt={`${community.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <h3 className="font-semibold text-lg mb-2 text-foreground group-hover:text-primary transition-colors">
                     {community.name}

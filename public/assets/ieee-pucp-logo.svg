@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="30" fill="#2D3748" stroke="#FFC700" stroke-width="2"/>
+  
+  <!-- IEEE text -->
+  <text x="32" y="22" font-family="Arial, sans-serif" font-size="8" font-weight="bold" text-anchor="middle" fill="white">IEEE</text>
+  
+  <!-- CS text -->
+  <text x="32" y="32" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#FFC700">CS</text>
+  
+  <!-- PUCP text -->
+  <text x="32" y="42" font-family="Arial, sans-serif" font-size="6.5" font-weight="bold" text-anchor="middle" fill="white">PUCP</text>
+  
+  <!-- Star elements for excellence -->
+  <path d="M20 18 L21 20 L23 20 L21.5 21.5 L22 24 L20 22.5 L18 24 L18.5 21.5 L17 20 L19 20 Z" fill="#FFC700" opacity="0.8"/>
+  <path d="M44 18 L45 20 L47 20 L45.5 21.5 L46 24 L44 22.5 L42 24 L42.5 21.5 L41 20 L43 20 Z" fill="#FFC700" opacity="0.8"/>
+  <path d="M20 44 L21 46 L23 46 L21.5 47.5 L22 50 L20 48.5 L18 50 L18.5 47.5 L17 46 L19 46 Z" fill="#FFC700" opacity="0.8"/>
+  <path d="M44 44 L45 46 L47 46 L45.5 47.5 L46 50 L44 48.5 L42 50 L42.5 47.5 L41 46 L43 46 Z" fill="#FFC700" opacity="0.8"/>
+</svg>
