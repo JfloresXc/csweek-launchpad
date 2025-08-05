@@ -1,4 +1,4 @@
-import { Linkedin, Instagram } from "lucide-react";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -31,16 +31,28 @@ export const Footer = () => {
             <h4 className="font-semibold text-lg mb-6 text-foreground">Síguenos</h4>
             <div className="flex justify-center space-x-6">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/cs-week-per%C3%BA-2025/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-card border border-border rounded-xl flex items-center justify-center text-muted-foreground hover:text-secondary hover:shadow-glow transition-smooth group"
               >
                 <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/csweekperu?igsh=NWQ3d2Y1ZGxkbzNy"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-card border border-border rounded-xl flex items-center justify-center text-muted-foreground hover:text-secondary hover:shadow-glow transition-smooth group"
               >
                 <Instagram className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1AiNyVUL1d/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gradient-card border border-border rounded-xl flex items-center justify-center text-muted-foreground hover:text-secondary hover:shadow-glow transition-smooth group"
+              >
+                <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
               </a>
             </div>
           </div>
