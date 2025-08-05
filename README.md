@@ -1,8 +1,16 @@
-# Welcome to your Lovable project
+# CS WEEK 2025 - Landing Page
 
-## Project info
+## Descripción del Proyecto
 
-**URL**: https://lovable.dev/projects/85723a08-4e3e-48cf-9370-a35095e9208a
+Landing page oficial para el evento **CS WEEK 2025**, una semana dedicada a la ciencia de la computación que reúne a estudiantes y profesionales de las principales universidades del Perú con capítulos IEEE Computer Society.
+
+## Características
+
+- 🎨 Diseño moderno y responsivo
+- 🏛️ Logos personalizados para 8 universidades peruanas
+- ⚡ Construido con Vite + React + TypeScript
+- 🎯 Optimizado para conversión y registro
+- 📱 Experiencia móvil optimizada
 
 ## How can I edit this code?
 
@@ -60,14 +68,51 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/85723a08-4e3e-48cf-9370-a35095e9208a) and click on Share -> Publish.
+### Deployment Automático con Vercel
 
-## Can I connect a custom domain to my Lovable project?
+1. **Conectar con Vercel:**
+   ```bash
+   # Instalar Vercel CLI
+   npm i -g vercel
+   
+   # Hacer login
+   vercel login
+   
+   # Configurar proyecto
+   vercel
+   ```
 
-Yes, you can!
+2. **Configurar Secrets en GitHub:**
+   - `VERCEL_TOKEN`: Token de Vercel
+   - `VERCEL_ORG_ID`: ID de organización
+   - `VERCEL_PROJECT_ID`: ID del proyecto
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+3. **Deployment automático:**
+   - Push a `main` → Deploy a producción
+   - Pull Request → Deploy preview
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Deployment Manual
+
+```bash
+# Build del proyecto
+npm run build
+
+# Preview local
+npm run preview
+
+# Deploy con Vercel
+vercel --prod
+```
+
+## Universidades Incluidas
+
+- 🏛️ IEEE Computer Society UNTELS
+- 🏛️ IEEE CS UNI
+- 🏛️ IEEE CS UNMSM
+- 🏛️ IEEE CS UPC
+- 🏛️ IEEE CS PUCP
+- 🏛️ IEEE CS USIL
+- 🏛️ IEEE CS UTEC
+- 🏛️ IEEE CS ULIMA
