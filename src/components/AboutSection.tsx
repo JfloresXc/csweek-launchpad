@@ -21,7 +21,7 @@ const themes = [
   },
   {
     title: "Desarrollo de Software",
-    icon: "</>" as any,
+    icon: "</>" as string,
     color: "dev-cyan",
     description: "Domina las mejores prácticas de desarrollo moderno",
   },
@@ -29,7 +29,7 @@ const themes = [
 
 export const AboutSection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
+    <section id="about" className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
@@ -47,7 +47,7 @@ export const AboutSection = () => {
               className="group animate-slide-in-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <Button variant="theme" className="w-full h-auto p-6 flex-col gap-4">
+              <Button variant="theme" className="w-full h-auto p-6 flex-col gap-4 whitespace-normal min-h-[200px] justify-start cursor-default">
                 <div 
                   className={`w-16 h-16 rounded-2xl bg-${theme.color}/20 flex items-center justify-center group-hover:bg-${theme.color}/30 transition-colors`}
                 >
@@ -55,7 +55,7 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-center">
                   <h3 className="font-semibold text-lg mb-2">{theme.title}</h3>
-                  <p className="text-sm text-muted-foreground">{theme.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{theme.description}</p>
                 </div>
               </Button>
             </div>

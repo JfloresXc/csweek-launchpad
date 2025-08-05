@@ -28,7 +28,7 @@ export const CommunitySection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-muted/10">
+    <section id="community" className="py-20 px-4 bg-muted/10">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-in-up">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">

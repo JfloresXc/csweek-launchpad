@@ -3,7 +3,7 @@ import { Calendar, Clock, Video } from "lucide-react";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-hero flex items-center justify-center">
+    <section id="hero" className="min-h-screen relative overflow-hidden bg-gradient-hero flex items-center justify-center">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 bg-gradient-glow opacity-40"></div>
       
@@ -23,10 +23,10 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto space-y-8 animate-fade-in">
+      <div className="container mx-auto px-4 text-center relative z-10 py-16 md:py-0">
+        <div className="max-w-4xl mx-auto space-y-12 md:space-y-8 animate-fade-in">
           {/* Main Title */}
-          <div className="space-y-4">
+          <div className="space-y-6 md:space-y-4">
             <h1 className="font-display text-6xl md:text-8xl font-bold leading-tight">
               <span className="text-primary">CS</span>
               <br />
@@ -40,7 +40,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Event Info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto text-left">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6 max-w-2xl mx-auto text-left">
             <div className="flex items-center gap-3 bg-gradient-card border border-border rounded-lg p-4 shadow-card">
               <Calendar className="w-5 h-5 text-secondary" />
               <div>
@@ -67,7 +67,7 @@ export const HeroSection = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="pt-8">
+          <div className="pt-16 md:pt-8">
             <Button 
               variant="hero" 
               size="xl"

@@ -7,10 +7,20 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
           {/* Logo and Slogan */}
           <div className="text-center md:text-left">
-            <h3 className="font-display text-2xl font-bold mb-4">
-              <span className="text-primary">CS</span>{" "}
-              <span className="text-secondary">WEEK</span>
-            </h3>
+            <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+                  <span className="text-background font-bold text-xl">CS</span>
+                </div>
+                <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-2xl text-foreground">
+                  WEEK
+                  <span className="text-secondary ml-2">2025</span>
+                </h3>
+              </div>
+            </div>
             <p className="text-muted-foreground">
               Conectando mentes, creando tecnología
             </p>
