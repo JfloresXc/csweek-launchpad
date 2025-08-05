@@ -92,7 +92,7 @@ export const Navbar = () => {
                 variant="hero"
                 size="sm"
                 className="animate-glow-pulse"
-                onClick={() => scrollToSection('register')}
+                onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}
               >
                 Regístrate
               </Button>
@@ -133,7 +133,13 @@ export const Navbar = () => {
                     className={`w-full justify-start text-left group transition-all duration-300 ${
                       index === navItems.length - 1 ? 'bg-primary/10 text-primary' : ''
                     }`}
-                    onClick={() => scrollToSection(item.id)}
+                    onClick={() => {
+                      if (item.id === 'register') {
+                        window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank');
+                      } else {
+                        scrollToSection(item.id);
+                      }
+                    }}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <IconComponent className="w-4 h-4 mr-3 group-hover:text-primary transition-colors" />

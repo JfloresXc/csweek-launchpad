@@ -47,7 +47,7 @@ export const Footer = () => {
 
           {/* Legal */}
           <div className="text-center md:text-right">
-            <h4 className="font-semibold text-lg mb-6 text-foreground">Legal</h4>
+            <h4 className="font-semibold text-lg mb-6 text-foreground">Computer Society</h4>
             <p className="text-muted-foreground">
               © 2025 CS Week. Todos los derechos reservados.
             </p>

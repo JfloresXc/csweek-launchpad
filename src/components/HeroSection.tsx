@@ -72,7 +72,7 @@ export const HeroSection = () => {
               variant="hero" 
               size="xl"
               className="animate-glow-pulse"
-              onClick={() => window.open('#register', '_blank')}
+              onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}
             >
               Regístrate ahora
             </Button>

@@ -87,26 +87,27 @@ export const RegisterSection = () => {
                 Sin costos ocultos, sin letra pequeña. Solo regístrate y participa.
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-4 w-full">
                 <Button 
                   variant="hero" 
                   size="xl"
-                  className="animate-glow-pulse text-lg px-12 py-4"
+                  className="animate-glow-pulse text-lg px-4 sm:px-8 md:px-12 py-4 w-full max-w-xs mx-auto text-sm sm:text-base md:text-lg"
                   onClick={() => {
-                    // Aquí iría la lógica de registro real
-                    window.open('https://forms.google.com/your-registration-form', '_blank');
+                    window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank');
                   }}
                 >
-                  Registrarme Ahora
+                  <span className="truncate">Registrarme Ahora</span>
                 </Button>
                 
-                <div className="flex items-center justify-center gap-4">
+                <div className="flex items-center justify-center gap-2 sm:gap-4">
                   <div className="h-px bg-border flex-1"></div>
-                  <span className="text-sm text-muted-foreground">o</span>
+                  <span className="text-sm text-muted-foreground px-2">o</span>
                   <div className="h-px bg-border flex-1"></div>
                 </div>
                 
-                <WhatsAppInlineButton />
+                <div className="w-full max-w-xs mx-auto">
+                  <WhatsAppInlineButton />
+                </div>
               </div>
               
               <p className="text-sm text-muted-foreground mt-6">
