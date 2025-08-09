@@ -1,53 +1,69 @@
 import { Users } from "lucide-react";
 
 export const CommunitySection = () => {
+  // Función para obtener la ruta del logo, priorizando versiones específicas de communities
+  const getCommunityLogo = (logoName: string) => {
+    // Mapeo de logos específicos de communities cuando estén disponibles
+    const communityLogos: Record<string, string> = {
+      "ieee-pucp-logo.svg": "/assets/communities/ieee_pucp_rgb_pp.svg",
+      "ieee-untels-logo.svg": "/assets/communities/ieee_untels_cs_rgb_pp_c.svg",
+      "ieee-unmsm-logo.svg": "/assets/communities/ieee_unmsm_cs_rgb_pp_c.svg",
+      "ieee-upc-logo.svg": "/assets/communities/ieee_upc_cs_rgb_pp_c.svg",
+      "ieee-unsa-logo.svg": "/assets/communities/ieee-unsa.jpeg",
+      "ieee-utp-logo.svg": "/assets/communities/ieee_utp_cs_rgb_pp.svg",
+      "ieee-peru-logo.svg": "/assets/communities/ieee_peru_cs_rgb.svg",
+    };
+    
+    // Si existe una versión específica de community, la usa; sino usa la versión estándar
+    return communityLogos[logoName] || `/assets/${logoName}`;
+  };
+
+  // Función para determinar si una imagen necesita padding especial
+  const needsSpecialPadding = (logoName: string) => {
+    return logoName === "ieee-unsa-logo.svg";
+  };
+
   const communities = [
     {
       name: "IEEE Computer Society UNTELS",
-      logo: "/assets/ieee-untels-logo.svg",
+      logo: getCommunityLogo("ieee-untels-logo.svg"),
       description: "Universidad Nacional Tecnológica de Lima Sur",
       url: "https://www.ieee.org/",
     },
     {
-      name: "IEEE CS UNI",
-      logo: "/assets/ieee-uni-logo.svg",
-      description: "Universidad Nacional de Ingeniería",
-      url: "https://www.ieee.org/",
-    },
-    {
       name: "IEEE CS UNMSM",
-      logo: "/assets/ieee-unmsm-logo.svg",
+      logo: getCommunityLogo("ieee-unmsm-logo.svg"),
       description: "Universidad Nacional Mayor de San Marcos",
       url: "https://www.ieee.org/",
     },
     {
       name: "IEEE CS UPC",
-      logo: "/assets/ieee-upc-logo.svg",
+      logo: getCommunityLogo("ieee-upc-logo.svg"),
       description: "Universidad Peruana de Ciencias Aplicadas",
       url: "https://www.ieee.org/",
     },
     {
       name: "IEEE CS PUCP",
-      logo: "/assets/ieee-pucp-logo.svg",
+      logo: getCommunityLogo("ieee-pucp-logo.svg"),
       description: "Pontificia Universidad Católica del Perú",
       url: "https://www.ieee.org/",
     },
     {
-      name: "IEEE CS USIL",
-      logo: "/assets/ieee-usil-logo.svg",
-      description: "Universidad San Ignacio de Loyola",
+      name: "IEEE CS UNSA",
+      logo: getCommunityLogo("ieee-unsa-logo.svg"),
+      description: "Universidad Nacional de San Agustín",
       url: "https://www.ieee.org/",
     },
     {
-      name: "IEEE CS UTEC",
-      logo: "/assets/ieee-utec-logo.svg",
-      description: "Universidad de Ingeniería y Tecnología",
+      name: "IEEE CS UTP",
+      logo: getCommunityLogo("ieee-utp-logo.svg"),
+      description: "Universidad Tecnológica del Perú",
       url: "https://www.ieee.org/",
     },
     {
-      name: "IEEE CS ULIMA",
-      logo: "/assets/ieee-ulima-logo.svg",
-      description: "Universidad de Lima",
+      name: "IEEE Computer Society Perú",
+      logo: getCommunityLogo("ieee-peru-logo.svg"),
+      description: "Capítulo Nacional de IEEE Computer Society",
       url: "https://www.ieee.org/",
     },
   ];
@@ -82,7 +98,7 @@ export const CommunitySection = () => {
               <div
                 key={`first-${index}`}
                 className="flex-shrink-0 mx-6 group cursor-pointer"
-                style={{ width: "320px", height: "200px" }}
+                style={{ width: "320px", height: "280px" }}
                 onClick={() => handleCommunityClick(community.url)}
               >
                 <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 group-hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/10 h-full flex flex-col">
@@ -90,11 +106,11 @@ export const CommunitySection = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Logo container */}
-                  <div className="relative w-16 h-16 mx-auto mb-4 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:border-primary/40 transition-all duration-300">
+                  <div className="relative w-24 h-24 mx-auto mb-4 flex items-center justify-centergroup-hover:border-primary/40 transition-all duration-300">
                     <img 
                       src={community.logo} 
                       alt={`${community.name} logo`}
-                      className="w-10 h-10 object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300"
+                      className={`w-24 h-24 p-2 object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300 bg-white rounded-lg`}
                     />
                   </div>
                   
@@ -121,13 +137,13 @@ export const CommunitySection = () => {
                 </div>
               </div>
             ))}
-            
-            {/* Duplicate set for seamless loop */}
+
+            {/* First set */}
             {communities.map((community, index) => (
               <div
-                key={`second-${index}`}
+                key={`first-${index}`}
                 className="flex-shrink-0 mx-6 group cursor-pointer"
-                style={{ width: "320px", height: "200px" }}
+                style={{ width: "320px", height: "280px" }}
                 onClick={() => handleCommunityClick(community.url)}
               >
                 <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 group-hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/10 h-full flex flex-col">
@@ -135,11 +151,11 @@ export const CommunitySection = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   {/* Logo container */}
-                  <div className="relative w-16 h-16 mx-auto mb-4 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/20 group-hover:border-primary/40 transition-all duration-300">
+                  <div className="relative w-24 h-24 mx-auto mb-4 flex items-center justify-centergroup-hover:border-primary/40 transition-all duration-300">
                     <img 
                       src={community.logo} 
                       alt={`${community.name} logo`}
-                      className="w-10 h-10 object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300"
+                      className={`w-24 h-24 p-2 object-contain filter brightness-110 group-hover:scale-110 transition-transform duration-300 bg-white rounded-lg`}
                     />
                   </div>
                   

@@ -90,11 +90,9 @@ export const EventSpeakerCard: React.FC<EventSpeakerCardProps> = ({
               <AvatarImage 
                 src={speaker.avatar} 
                 alt={speaker.name}
-                className="object-cover"
+                className="object-cover bg-white"
               />
-              <AvatarFallback className="bg-primary/10 text-primary font-semibold">
-                {getInitials(speaker.name)}
-              </AvatarFallback>
+              {getInitials(speaker.name)}
             </Avatar>
             
             {/* Badges de estado */}
@@ -156,7 +154,7 @@ export const EventSpeakerCard: React.FC<EventSpeakerCardProps> = ({
         {/* Bio */}
         {showBio && speaker.bio && (
           <p className={cn(
-            'text-muted-foreground mb-4 line-clamp-3',
+            'text-muted-foreground mb-4 line-clamp-3 text-center',
             variant === 'compact' && 'text-xs line-clamp-2',
             variant === 'default' && 'text-sm'
           )}>

@@ -12,32 +12,27 @@ import { EventSponsor } from '../../event-sponsors/types/event-sponsor.types';
  * Muestra las empresas que apoyan el evento
  */
 export const EventSponsorsSection: React.FC = () => {
-  // Empresas aliadas temporales (serán reemplazadas con datos reales)
-  const empresasAliadas = [
-    {
-      id: '1',
-      name: 'TechCorp Solutions',
-      description: 'Líder en soluciones tecnológicas empresariales y desarrollo de software innovador.',
-      logo: 'https://via.placeholder.com/200x100/3B82F6/FFFFFF?text=TechCorp',
-      website: 'https://techcorp.example.com',
-      tier: 'gold' as const,
-      featured: true,
-      category: 'Tecnología'
-    },
-    {
-      id: '2',
-      name: 'InnovateLab',
-      description: 'Laboratorio de innovación especializado en inteligencia artificial y machine learning.',
-      logo: 'https://via.placeholder.com/200x100/10B981/FFFFFF?text=InnovateLab',
-      website: 'https://innovatelab.example.com',
-      tier: 'gold' as const,
-      featured: true,
-      category: 'IA & ML'
-    }
-  ];
-
-  const [loading, setLoading] = React.useState(false);
+  const [sponsors, setSponsors] = React.useState<EventSponsor[]>([]);
+  const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
+
+  // Cargar sponsors desde el servicio
+  React.useEffect(() => {
+    const loadSponsors = async () => {
+      try {
+        setLoading(true);
+        const response = await EventSponsorsMockService.getEventSponsors({ limit: 10, page: 1 });
+        setSponsors(response.sponsors);
+      } catch (err) {
+        setError('Error al cargar las empresas aliadas');
+        console.error('Error loading sponsors:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadSponsors();
+  }, []);
 
   if (loading) {
     return (
@@ -107,9 +102,9 @@ export const EventSponsorsSection: React.FC = () => {
 
         {/* Allied Companies Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {empresasAliadas.map((company, index) => (
+          {sponsors.map((sponsor, index) => (
             <motion.div
-              key={company.id}
+              key={sponsor.id}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
@@ -123,15 +118,15 @@ export const EventSponsorsSection: React.FC = () => {
                   {/* Logo */}
                   <div className="flex items-center justify-center mb-6">
                     <div className="h-20 w-32 flex items-center justify-center">
-                      {company.logo ? (
+                      {sponsor.logo ? (
                         <img 
-                          src={company.logo} 
-                          alt={company.name}
+                          src={sponsor.logo} 
+                          alt={sponsor.name}
                           className="max-h-full max-w-full object-contain filter group-hover:brightness-110 transition-all duration-300"
                         />
                       ) : (
                         <div className="h-20 w-32 bg-gradient-hero rounded-lg flex items-center justify-center text-white font-bold text-xl">
-                          {company.name.charAt(0)}
+                          {sponsor.name.charAt(0)}
                         </div>
                       )}
                     </div>
@@ -140,11 +135,11 @@ export const EventSponsorsSection: React.FC = () => {
                   {/* Company Info */}
                   <div className="text-center">
                     <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-csweek-primary transition-colors">
-                      {company.name}
+                      {sponsor.name}
                     </h3>
                     
                     <p className="text-muted-foreground text-sm mb-4 line-clamp-3">
-                      {company.description}
+                      {sponsor.description}
                     </p>
 
                     {/* Category Badge */}
@@ -152,19 +147,19 @@ export const EventSponsorsSection: React.FC = () => {
                       variant="secondary" 
                       className="bg-csweek-secondary/10 text-csweek-secondary border-0 text-sm mb-4"
                     >
-                      {company.category === 'Tecnología' && '💻 Tecnología'}
-                      {company.category === 'IA & ML' && '🤖 IA & ML'}
-                      {company.category === 'Startup' && '🚀 Startup'}
-                      {company.category === 'Empresa' && '🏢 Empresa'}
-                      {company.category === 'Consultoría' && '💼 Consultoría'}
-                      {company.category === 'Innovación' && '⚡ Innovación'}
+                      {sponsor.category === 'education' && '🎓 Educación'}
+                      {sponsor.category === 'technology' && '💻 Tecnología'}
+                      {sponsor.category === 'startup' && '🚀 Startup'}
+                      {sponsor.category === 'enterprise' && '🏢 Empresa'}
+                      {sponsor.category === 'consulting' && '💼 Consultoría'}
+                      {sponsor.category === 'innovation' && '⚡ Innovación'}
                     </Badge>
 
                     {/* Website Link */}
-                    {company.website && (
+                    {sponsor.website && (
                       <div className="text-center">
                         <a
-                          href={company.website}
+                          href={sponsor.website}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-2 text-csweek-secondary hover:text-primary transition-colors text-sm font-medium"

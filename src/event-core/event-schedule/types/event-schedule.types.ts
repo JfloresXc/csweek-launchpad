@@ -30,7 +30,7 @@ export interface EventSession {
   level: 'beginner' | 'intermediate' | 'advanced';
   track: EventTrack;
   isLive: boolean;
-  eventDay: 1 | 2 | 3; // Día del evento
+  eventDay: 1 | 2 | 3 | 4 | 5; // Día del evento
   registrationRequired: boolean;
   order?: number; // Orden en la agenda
   isActive?: boolean; // Si está activa

@@ -9,138 +9,356 @@ import {
 // Datos mockeados de speakers para CS WEEK 2025
 const mockSpeakers: EventSpeaker[] = [
   {
-    id: '1',
-    event: 'csweek-2025',
-    name: 'Ana García',
-    title: 'Senior Frontend Developer',
-    company: 'Google',
-    bio: 'Experta en React y arquitecturas frontend modernas. Ha liderado equipos de desarrollo en múltiples startups exitosas y contribuye activamente a proyectos open source.',
-    avatar: '/placeholder.svg',
-    social: {
-      twitter: 'https://twitter.com/anagarcia',
-      linkedin: 'https://linkedin.com/in/anagarcia',
-      github: 'https://github.com/anagarcia'
+    "id": "1",
+    "event": "csweek-2025",
+    "name": "Luz Alicia Acevedo Avila",
+    "title": "Project/Product Manager",
+    "company": "UNT",
+    "bio": "Project/Product Manager, Docente & Speaker: Gestión de proyectos, producto y procesos | UNT",
+    "avatar": "/assets/speakers/Alicia-Acevedo.jpg",
+    "social": {
+      "twitter": "https://twitter.com/luzacevedo",
+      "linkedin": "https://linkedin.com/in/luzacevedo",
+      "github": "https://github.com/luzacevedo"
     },
-    featured: true,
-    keynote: false,
-    track: 'frontend',
-    experienceLevel: 'advanced',
-    eventBadge: 'Keynote Speaker',
-    order: 1,
-    isActive: true,
-    createdAt: '2024-01-15T10:00:00Z',
-    updatedAt: '2024-01-15T10:00:00Z'
+    "featured": false,
+    "keynote": false,
+    "track": "product",
+    "experienceLevel": "advanced",
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
   },
   {
-    id: '2',
-    event: 'csweek-2025',
-    name: 'Carlos Mendoza',
-    title: 'AI Research Scientist',
-    company: 'Microsoft',
-    bio: 'Investigador especializado en Machine Learning y Deep Learning. PhD en Computer Science con más de 50 publicaciones en conferencias internacionales.',
-    avatar: '/placeholder.svg',
-    social: {
-      twitter: 'https://twitter.com/carlosmendoza',
-      linkedin: 'https://linkedin.com/in/carlosmendoza',
-      website: 'https://carlosmendoza.dev'
+    "id": "2",
+    "event": "csweek-2025",
+    "name": "Carlos Lenon",
+    "title": "Frontend Engineer",
+    "company": "React dev",
+    "bio": "Frontend Engineer | React dev | In my free time play with | React Native/Expo | Figma | Video Editing",
+    "avatar": "/assets/speakers/Carlos-Lenon.png",
+    "social": {
+      "twitter": "https://twitter.com/carloslenon",
+      "linkedin": "https://linkedin.com/in/carloslenon",
+      "github": "https://github.com/carloslenon"
     },
-    featured: true,
-    keynote: true,
-    track: 'ai',
-    experienceLevel: 'advanced',
-    eventBadge: 'AI Expert',
-    order: 2,
-    isActive: true,
-    createdAt: '2024-01-15T10:00:00Z',
-    updatedAt: '2024-01-15T10:00:00Z'
+    "featured": false,
+    "keynote": false,
+    "track": "frontend",
+    "experienceLevel": "intermediate",
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
   },
   {
-    id: '3',
-    event: 'csweek-2025',
-    name: 'María Rodriguez',
-    title: 'DevOps Engineer',
-    company: 'Amazon',
-    bio: 'Especialista en infraestructura cloud y automatización. Experta en AWS, Kubernetes y CI/CD pipelines. Mentora activa en comunidades tech.',
-    avatar: '/placeholder.svg',
-    social: {
-      linkedin: 'https://linkedin.com/in/mariarodriguez',
-      github: 'https://github.com/mariarodriguez',
-      website: 'https://mariarodriguez.tech'
+    "id": "3",
+    "event": "csweek-2025",
+    "name": "Daniel Eduardo Ibañez Garcia",
+    "title": "Backend Developer",
+    "company": "Laboral.AI",
+    "bio": "Ingeniería de Software | Backend Developer | Laboral Hero en Laboral.AI | Content Creator | UTP",
+    "avatar": "/assets/speakers/Daniel-Ibañez.jpg",
+    "social": {
+      "twitter": "https://twitter.com/danielibañez",
+      "linkedin": "https://linkedin.com/in/danielibañez",
+      "github": "https://github.com/danielibañez"
     },
-    featured: false,
-    keynote: false,
-    track: 'devops',
-    experienceLevel: 'advanced',
-    order: 3,
-    isActive: true,
-    createdAt: '2024-01-15T10:00:00Z',
-    updatedAt: '2024-01-15T10:00:00Z'
+    "featured": false,
+    "keynote": false,
+    "track": "backend",
+    "experienceLevel": "intermediate",
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
   },
   {
-    id: '4',
-    event: 'csweek-2025',
-    name: 'Diego Fernández',
-    title: 'Mobile App Developer',
-    company: 'Spotify',
-    bio: 'Desarrollador móvil con experiencia en React Native y Flutter. Ha creado aplicaciones con millones de descargas y es speaker regular en conferencias.',
-    avatar: '/placeholder.svg',
-    social: {
-      twitter: 'https://twitter.com/diegofernandez',
-      linkedin: 'https://linkedin.com/in/diegofernandez',
-      github: 'https://github.com/diegofernandez'
+    "id": "4",
+    "event": "csweek-2025",
+    "name": "Deyvid Piero Tolentino Isidro",
+    "title": "Mentor HealthTech",
+    "company": "UNHEVAL",
+    "bio": "Mentor HealthTech | Odontólogo | Investigador | UNHEVAL",
+    "avatar": "/assets/speakers/Deyvid-Piero-Tolentino-Isidro.png",
+    "social": {
+      "twitter": "https://twitter.com/deyvidtolentino",
+      "linkedin": "https://linkedin.com/in/deyvidtolentino",
+      "github": "https://github.com/deyvidtolentino"
     },
-    featured: false,
-    keynote: false,
-    track: 'mobile',
-    experienceLevel: 'advanced',
-    order: 4,
-    isActive: true,
-    createdAt: '2024-01-15T10:00:00Z',
-    updatedAt: '2024-01-15T10:00:00Z'
+    "featured": false,
+    "keynote": false,
+    "track": "healthtech",
+    "experienceLevel": "advanced",
+    "order": 4,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
   },
   {
-    id: '5',
-    event: 'csweek-2025',
-    name: 'Laura Jiménez',
-    title: 'Backend Architect',
-    company: 'Netflix',
-    bio: 'Arquitecta de software especializada en sistemas distribuidos y microservicios. Lidera la arquitectura de plataformas que manejan millones de usuarios.',
-    avatar: '/placeholder.svg',
-    social: {
-      linkedin: 'https://linkedin.com/in/laurajimenez',
-      github: 'https://github.com/laurajimenez',
-      website: 'https://laurajimenez.dev'
+    "id": "5",
+    "event": "csweek-2025",
+    "name": "Elvis Geovanny Batzibal",
+    "title": "DevOps Engineer",
+    "company": "OpenShareTech",
+    "bio": "DevOps Engineer | Gen AI Specialist | IA Cloud Advocate | OpenShareTech",
+    "avatar": "/assets/speakers/Elvis-Batzibal.png",
+    "social": {
+      "twitter": "https://twitter.com/elvisbatzibal",
+      "linkedin": "https://linkedin.com/in/elvisbatzibal",
+      "github": "https://github.com/elvisbatzibal"
     },
-    featured: true,
-    keynote: false,
-    track: 'backend',
-    experienceLevel: 'advanced',
-    eventBadge: 'Architecture Expert',
-    order: 5,
-    isActive: true,
-    createdAt: '2024-01-15T10:00:00Z',
-    updatedAt: '2024-01-15T10:00:00Z'
+    "featured": false,
+    "keynote": false,
+    "track": "devops",
+    "experienceLevel": "advanced",
+    "order": 5,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
   },
   {
-    id: '6',
-    event: 'csweek-2025',
-    name: 'Roberto Silva',
-    title: 'Cybersecurity Specialist',
-    company: 'Tesla',
-    bio: 'Especialista en ciberseguridad con más de 10 años de experiencia. Experto en ethical hacking y seguridad de aplicaciones web.',
-    avatar: '/placeholder.svg',
-    social: {
-      twitter: 'https://twitter.com/robertosilva',
-      linkedin: 'https://linkedin.com/in/robertosilva'
+    "id": "6",
+    "event": "csweek-2025",
+    "name": "Henry Luis Callupe",
+    "title": "Ingeniero de Sistemas",
+    "company": "UPN",
+    "bio": "Ingeniero de Sistemas | Desarrollo de Software & Automatización | UPN",
+    "avatar": "/assets/speakers/Henry-Callupe.jpeg",
+    "social": {
+      "twitter": "https://twitter.com/henrycallupe",
+      "linkedin": "https://linkedin.com/in/henrycallupe",
+      "github": "https://github.com/henrycallupe"
     },
-    featured: false,
-    keynote: false,
-    track: 'general',
-    experienceLevel: 'advanced',
-    order: 6,
-    isActive: true,
-    createdAt: '2024-01-15T10:00:00Z',
-    updatedAt: '2024-01-15T10:00:00Z'
+    "featured": false,
+    "keynote": false,
+    "track": "backend",
+    "experienceLevel": "intermediate",
+    "order": 6,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "7",
+    "event": "csweek-2025",
+    "name": "Jackson Merma",
+    "title": "Software Engineer en Data Arch",
+    "company": "UNSA",
+    "bio": "Software Engineer en Data Arch | UNSA",
+    "avatar": "/assets/speakers/Jackson-Merma.jpeg",
+    "social": {
+      "twitter": "https://twitter.com/jacksonmerma",
+      "linkedin": "https://linkedin.com/in/jacksonmerma",
+      "github": "https://github.com/jacksonmerma"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "data",
+    "experienceLevel": "intermediate",
+    "order": 7,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "8",
+    "event": "csweek-2025",
+    "name": "Jazmin Reyes",
+    "title": "Web Developer",
+    "company": "UNT",
+    "bio": "Ciencias de la Computación | Web Developer | Analista de Datos | UNT",
+    "avatar": "/assets/speakers/jazmin-reyes.png",
+    "social": {
+      "twitter": "https://twitter.com/jazminreyes",
+      "linkedin": "https://linkedin.com/in/jazminreyes",
+      "github": "https://github.com/jazminreyes"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "frontend",
+    "experienceLevel": "intermediate",
+    "order": 8,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "9",
+    "event": "csweek-2025",
+    "name": "Jimy Dolores",
+    "title": "Software Architect",
+    "company": "Codea Bien",
+    "bio": "Software Architect | Founder Angular Perú | CEO Codea Bien",
+    "avatar": "/assets/speakers/jimy-dolores.jpeg",
+    "social": {
+      "twitter": "https://twitter.com/jimydolores",
+      "linkedin": "https://linkedin.com/in/jimydolores",
+      "github": "https://github.com/jimydolores"
+    },
+    "featured": true,
+    "keynote": false,
+    "track": "frontend",
+    "experienceLevel": "advanced",
+    "order": 9,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "10",
+    "event": "csweek-2025",
+    "name": "Jose Flores Chamba",
+    "title": "Front-End Developer",
+    "company": "UNTELS",
+    "bio": "Front-End Developer | GDG Open Lima | Ingeniero de Sistemas | UNTELS",
+    "avatar": "/assets/speakers/jose-flores-chamba.png",
+    "social": {
+      "twitter": "https://twitter.com/joseflores",
+      "linkedin": "https://linkedin.com/in/joseflores",
+      "github": "https://github.com/joseflores"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "frontend",
+    "experienceLevel": "intermediate",
+    "order": 10,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "11",
+    "event": "csweek-2025",
+    "name": "Maribel Maza",
+    "title": "Software Engineer",
+    "company": "NTT DATA Perú",
+    "bio": "Software Engineer en NTT DATA Perú | AI & GenAI Solutions | UPC",
+    "avatar": "/assets/speakers/maribel-maza.jpg",
+    "social": {
+      "twitter": "https://twitter.com/maribelmaza",
+      "linkedin": "https://linkedin.com/in/maribelmaza",
+      "github": "https://github.com/maribelmaza"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "data",
+    "experienceLevel": "intermediate",
+    "order": 11,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "12",
+    "event": "csweek-2025",
+    "name": "Mariluisa Harumi Pereda Pascal",
+    "title": "Análisis y pruebas funcionales",
+    "company": "OECE",
+    "bio": "Análisis y pruebas funcionales en el OECE | UNTELS",
+    "avatar": "/assets/speakers/Mariluisa-Harumi-Pereda-Pascal.jpeg",
+    "social": {
+      "twitter": "https://twitter.com/mariluisapereda",
+      "linkedin": "https://linkedin.com/in/mariluisapereda",
+      "github": "https://github.com/mariluisapereda"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "qa",
+    "experienceLevel": "intermediate",
+    "order": 12,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "13",
+    "event": "csweek-2025",
+    "name": "Renzo Cienfuegos (SUDOJUNG)",
+    "title": "Scientific Computing Student",
+    "company": "UNMSM",
+    "bio": "Scientific Computing Student | Self-taught in Cybersecurity and Quantum Computing | UNMSM",
+    "avatar": "/assets/speakers/Renzo-Cienfuegos-SudoJung.jpg",
+    "social": {
+      "twitter": "https://twitter.com/renzocienfuegos",
+      "linkedin": "https://linkedin.com/in/renzocienfuegos",
+      "github": "https://github.com/renzocienfuegos"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "cybersecurity",
+    "experienceLevel": "intermediate",
+    "order": 13,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "14",
+    "event": "csweek-2025",
+    "name": "Jose Amadeo Diaz Diaz",
+    "title": "Cloud Architect",
+    "company": "PUCP",
+    "bio": "Cloud Architect | Java Champion | PeruJUG Founder | PUCP",
+    "avatar": "/assets/speakers/Jose-Amadeo-Diaz-Diaz.jpg",
+    "social": {
+      "twitter": "https://twitter.com/joseadiaz",
+      "linkedin": "https://linkedin.com/in/joseadiaz",
+      "github": "https://github.com/joseadiaz"
+    },
+    "featured": true,
+    "keynote": true,
+    "track": "backend",
+    "experienceLevel": "advanced",
+    "order": 14,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "15",
+    "event": "csweek-2025",
+    "name": "Goblin Slay3r",
+    "title": "Pentester",
+    "company": "Cibersecurity Red Team",
+    "bio": "Cibersecurity Red Team | Pentester",
+    "avatar": "/assets/speakers/Goblin-Slay3r.png",
+    "social": {
+      "twitter": "https://twitter.com/goblinslay3r",
+      "linkedin": "https://linkedin.com/in/goblinslay3r",
+      "github": "https://github.com/goblinslay3r"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "cybersecurity",
+    "experienceLevel": "advanced",
+    "order": 15,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "16",
+    "event": "csweek-2025",
+    "name": "Juan Alberto Contreras Flores",
+    "title": "Founder & CEO",
+    "company": "Help Business Peru Unidos",
+    "bio": "Founder & CEO Help Business Peru Unidos | Auditor en Sistemas de seguridad y redes | UTP",
+    "avatar": "/assets/speakers/Juan-Alberto-Contreras-Flores.jpg",
+    "social": {
+      "twitter": "https://twitter.com/juancontreras",
+      "linkedin": "https://linkedin.com/in/juancontreras",
+      "github": "https://github.com/juancontreras"
+    },
+    "featured": true,
+    "keynote": false,
+    "track": "cybersecurity",
+    "experienceLevel": "advanced",
+    "order": 16,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
   }
 ];
 
@@ -158,7 +376,7 @@ export class EventSpeakersMockService {
     const { limit = 10, page = 1, sort = 'name' } = params;
 
     // Aplicar ordenamiento
-    let sortedSpeakers = [...mockSpeakers];
+    const sortedSpeakers = [...mockSpeakers];
     switch (sort) {
       case 'name':
         sortedSpeakers.sort((a, b) => a.name.localeCompare(b.name));

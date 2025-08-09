@@ -926,7 +926,8 @@ export const mockEventSpeakers: EventSpeaker[] = [
     title: "Senior Frontend Developer",
     company: "TechCorp",
     bio: "Experta en React y TypeScript con 8 años de experiencia...",
-    avatar: "/mock-avatars/ana-garcia.jpg",
+    avatar:
+      "https://drive.google.com/drive/folders/1LYSWoFxdKCZTOcVQRjb-XiVCpxAdYYEZ",
     social: {
       twitter: "@anagarcia_dev",
       linkedin: "ana-garcia-dev",

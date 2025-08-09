@@ -121,7 +121,8 @@ export const eventScheduleUtils = {
   
   // Formatear fecha
   formatDate: (dateString: string): string => {
-    const date = new Date(dateString);
+    // Agregar 'T00:00:00' para evitar problemas de zona horaria
+    const date = new Date(dateString + 'T00:00:00');
     return date.toLocaleDateString('es-PE', {
       weekday: 'long',
       year: 'numeric',

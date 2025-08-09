@@ -42,7 +42,7 @@ export const WhatsAppButton = () => {
           hover:from-[#128C7E] hover:to-[#25D366]
           border-2 border-[#25D366]/30
           shadow-lg hover:shadow-[0_0_20px_rgba(37,211,102,0.4)]
-          transition-all duration-300 ease-out
+          transition-all duration-700 ease-out
           group-hover:scale-110
           animate-pulse hover:animate-none
           cursor-pointer
@@ -62,8 +62,8 @@ export const WhatsAppButton = () => {
       </button>
 
       {/* Efecto de ondas */}
-      <div className="absolute inset-0 rounded-full bg-[#25D366]/20 animate-ping pointer-events-none"></div>
-      <div className="absolute inset-0 rounded-full bg-[#25D366]/10 animate-ping pointer-events-none" style={{ animationDelay: '0.5s' }}></div>
+      <div className="absolute inset-0 rounded-full bg-[#25D366]/8 animate-ping pointer-events-none"></div>
+      <div className="absolute inset-0 rounded-full bg-[#25D366]/4 animate-ping pointer-events-none" style={{ animationDelay: '0.5s' }}></div>
     </div>
   );
 };

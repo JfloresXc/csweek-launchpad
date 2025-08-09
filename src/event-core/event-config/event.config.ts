@@ -5,7 +5,7 @@ export const EVENT_CONFIG = {
   fullName: 'Computer Science Week 2025',
   tagline: 'El evento de tecnología más grande del año',
   description: 'Una semana completa dedicada a las ciencias de la computación, con speakers internacionales, workshops y networking.',
-  
+
   // Fechas del evento
   dates: {
     start: '2025-03-10',
@@ -14,7 +14,7 @@ export const EVENT_CONFIG = {
     registrationEnd: '2025-03-05',
     earlyBirdEnd: '2025-02-15'
   },
-  
+
   // Ubicación
   location: {
     venue: 'Centro de Convenciones Lima',
@@ -26,14 +26,14 @@ export const EVENT_CONFIG = {
       lng: -77.0428
     }
   },
-  
+
   // Capacidad y límites
   capacity: {
     total: 2000,
     perDay: 500,
     workshops: 50
   },
-  
+
   // Redes sociales del evento
   social: {
     website: 'https://csweek2025.com',
@@ -43,31 +43,46 @@ export const EVENT_CONFIG = {
     youtube: '@csweek2025',
     discord: 'https://discord.gg/csweek2025'
   },
-  
+
   // Contacto
   contact: {
     email: 'info@csweek2025.com',
     phone: '+51 1 234-5678',
     whatsapp: '+51 987 654 321'
   },
-  
+
   // Tracks tecnológicos
   tracks: [
     'frontend',
-    'backend', 
+    'backend',
     'mobile',
     'ai',
     'devops',
-    'general'
+    'general',
+    'qa',
+    'product',
+    'healthtech',
+    'data',
+    'cybersecurity',
+    'Desarrollo Móvil',
+    'Cloud y DevOps',
+    'Datos e Inteligencia Artificial',
+    'Desarrollo Profesional',
+    'Desarrollo Frontend',
+    'Desarrollo Backend',
+    'Web3 y Blockchain',
+    'Calidad de Software',
+    'Ciberseguridad',
+    'Innovación y Emprendimiento'
   ] as const,
-  
+
   // Niveles de experiencia
   experienceLevels: [
     'beginner',
-    'intermediate', 
+    'intermediate',
     'advanced'
   ] as const,
-  
+
   // Tipos de sesión
   sessionTypes: [
     'keynote',
@@ -75,7 +90,7 @@ export const EVENT_CONFIG = {
     'workshop',
     'panel',
     'networking',
-    'break'
+    'break',
   ] as const
 } as const;
 
