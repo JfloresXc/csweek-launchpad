@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video, CheckCircle } from "lucide-react";
+import { Calendar, Clock, Video, CheckCircle, UserPlus } from "lucide-react";
 import { WhatsAppInlineButton } from "@/components/WhatsAppButton";
 
 /**
@@ -16,11 +16,15 @@ export const RegisterSection = () => {
   ];
 
   return (
-    <section id="register" className="py-20 px-4 bg-gradient-to-b from-muted/10 to-background">
+    <section id="register" className="py-20 px-4 bg-muted/10">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <div className="mb-16 animate-slide-in-up">
+            <div className="inline-flex items-center gap-2 bg-csweek-secondary/10 text-csweek-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">
+              <UserPlus className="w-4 h-4" />
+              Registro
+            </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
               ¡Asegura tu{" "}
               <span className="text-primary">lugar</span> en{" "}

@@ -9,14 +9,15 @@ export const Footer = () => {
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                  <span className="text-background font-bold text-xl">CS</span>
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                <img 
+                  src="/assets/logo-csweek.png" 
+                  alt="CS WEEK 2025 Logo" 
+                  className="w-12 h-12 rounded-lg"
+                />
               </div>
               <div>
                 <h3 className="font-display font-bold text-2xl text-foreground">
-                  WEEK
+                  CS WEEK
                   <span className="text-secondary ml-2">2025</span>
                 </h3>
               </div>

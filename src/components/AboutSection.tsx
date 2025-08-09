@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Lightbulb } from "lucide-react";
 
 const themes = [
   {
@@ -29,9 +30,13 @@ const themes = [
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-20 px-4 bg-gradient-to-b from-background to-muted/20">
+    <section id="about" className="py-20 px-4 bg-muted/10">
       <div className="container mx-auto">
         <div className="text-center mb-16 animate-slide-in-up">
+          <div className="inline-flex items-center gap-2 bg-csweek-secondary/10 text-csweek-secondary px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <Lightbulb className="w-4 h-4" />
+            Sobre el Evento
+          </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">
             Una semana de{" "}
             <span className="text-secondary">innovación</span> y{" "}

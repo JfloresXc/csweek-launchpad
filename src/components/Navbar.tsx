@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Calendar, Users, Info, Home } from "lucide-react";
+import { Menu, X, Calendar, Users, Info, Mic, Clock, Building, HelpCircle } from "lucide-react";
 
 /**
  * Navbar experimental con diseño sticky que se adapta al scroll
@@ -30,10 +30,10 @@ export const Navbar = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: 'Inicio', icon: Home },
-    { id: 'about', label: 'Acerca de', icon: Info },
-    { id: 'community', label: 'Comunidad', icon: Users },
-    { id: 'register', label: 'Registro', icon: Calendar },
+    { id: 'speakers', label: 'Speakers', icon: Mic },
+    { id: 'schedule', label: 'Agenda', icon: Clock },
+    { id: 'sponsors', label: 'Sponsors', icon: Building },
+    { id: 'community', label: 'Comunidades', icon: Users },
   ];
 
   return (
@@ -53,14 +53,15 @@ export const Navbar = () => {
               onClick={() => scrollToSection('hero')}
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-background font-bold text-lg">CS</span>
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                <img 
+                  src="/assets/logo-csweek.png" 
+                  alt="CS WEEK 2025 Logo" 
+                  className="w-10 h-10 rounded-lg group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
               <div className="hidden sm:block">
                 <span className="font-display font-bold text-xl text-foreground group-hover:text-primary transition-colors">
-                  WEEK
+                  CS WEEK
                 </span>
                 <span className="text-secondary ml-1">2025</span>
               </div>
@@ -94,7 +95,7 @@ export const Navbar = () => {
                 className="animate-glow-pulse"
                 onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}
               >
-                Regístrate
+                Regístrate ahora
               </Button>
             </div>
 
@@ -130,16 +131,8 @@ export const Navbar = () => {
                   <Button
                     key={item.id}
                     variant="ghost"
-                    className={`w-full justify-start text-left group transition-all duration-300 ${
-                      index === navItems.length - 1 ? 'bg-primary/10 text-primary' : ''
-                    }`}
-                    onClick={() => {
-                      if (item.id === 'register') {
-                        window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank');
-                      } else {
-                        scrollToSection(item.id);
-                      }
-                    }}
+                    className="w-full justify-start text-left group transition-all duration-300"
+                    onClick={() => scrollToSection(item.id)}
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <IconComponent className="w-4 h-4 mr-3 group-hover:text-primary transition-colors" />
@@ -147,6 +140,20 @@ export const Navbar = () => {
                   </Button>
                 );
               })}
+              
+              {/* Botón de registro en menú móvil */}
+              <Button
+                variant="hero"
+                className="w-full mt-4 animate-glow-pulse"
+                onClick={() => {
+                  window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank');
+                  setIsMobileMenuOpen(false);
+                }}
+                style={{ animationDelay: `${navItems.length * 0.1}s` }}
+              >
+                <Calendar className="w-4 h-4 mr-2" />
+                Regístrate ahora
+              </Button>
             </div>
           </div>
         </div>
