@@ -90,10 +90,6 @@ export const HeroSection = () => {
                 Unirse al Meet
               </Button>
             </div>
-            
-            <p className="text-sm text-muted-foreground">
-              ⚡ Evento 100% gratuito • 🎓 Certificado incluido • 🚀 Acceso directo
-            </p>
           </div>
         </div>
       </div>
