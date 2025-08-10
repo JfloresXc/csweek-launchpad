@@ -649,17 +649,7 @@ const SessionDetailModal: React.FC<SessionDetailModalProps> = ({ session, isOpen
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="border-t border-border bg-muted/20 p-4">
-          <div className="flex justify-end gap-3">
-            <Button variant="outline" onClick={onClose}>
-              Cerrar
-            </Button>
-            <Button className="bg-csweek-primary hover:bg-csweek-primary/90 text-white px-6">
-              Agregar a Calendario
-            </Button>
-          </div>
-        </div>
+
       </div>
     </div>
   );
