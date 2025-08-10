@@ -71,7 +71,7 @@ export const AboutSection = () => {
         </div>
 
         {/* Description */}
-        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in px-4">
           <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             Explora las últimas tendencias en tecnología a través de charlas, talleres y retos prácticos. 
             Un evento <span className="text-secondary font-semibold">100% gratuito</span>, virtual y con certificado de participación, 
@@ -83,10 +83,10 @@ export const AboutSection = () => {
             variant="hero" 
             size="lg"
             onClick={() => navigate('/about')}
-            className="animate-glow-pulse group"
+            className="animate-glow-pulse group w-full sm:w-auto max-w-xs sm:max-w-none mx-auto text-sm sm:text-base px-4 sm:px-6"
           >
-            Conoce más sobre el evento
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <span className="truncate">Conoce más sobre el evento</span>
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
           </Button>
         </div>
       </div>
