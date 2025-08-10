@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Clock, Video } from "lucide-react";
+import { Calendar, Clock, Video, ExternalLink } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -57,25 +57,43 @@ export const HeroSection = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-3 bg-gradient-card border border-border rounded-lg p-4 shadow-card">
-              <Video className="w-5 h-5 text-secondary" />
-              <div>
+            <div className="flex items-center gap-3 bg-gradient-card border border-border rounded-lg p-4 shadow-card hover:shadow-elevation transition-smooth cursor-pointer group"
+                 onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}>
+              <Video className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
+              <div className="flex-1">
                 <p className="text-sm text-muted-foreground">Plataforma</p>
-                <p className="font-semibold">Google Meet</p>
+                <p className="font-semibold group-hover:text-primary transition-colors">Google Meet</p>
               </div>
+              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
             </div>
           </div>
 
-          {/* CTA Button */}
-          <div className="pt-16 md:pt-8">
-            <Button 
-              variant="hero" 
-              size="xl"
-              className="animate-glow-pulse"
-              onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}
-            >
-              Regístrate ahora
-            </Button>
+          {/* CTA Buttons */}
+          <div className="pt-16 md:pt-8 space-y-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button 
+                variant="hero" 
+                size="xl"
+                className="animate-glow-pulse w-full sm:w-auto"
+                onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}
+              >
+                Regístrate ahora
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="xl"
+                className="w-full sm:w-auto border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
+                onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}
+              >
+                <Video className="w-5 h-5 mr-2" />
+                Unirse al Meet
+              </Button>
+            </div>
+            
+            <p className="text-sm text-muted-foreground">
+              ⚡ Evento 100% gratuito • 🎓 Certificado incluido • 🚀 Acceso directo
+            </p>
           </div>
         </div>
       </div>

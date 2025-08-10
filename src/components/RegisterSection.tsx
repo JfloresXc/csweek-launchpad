@@ -37,25 +37,28 @@ export const RegisterSection = () => {
 
           {/* Event Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group">
-              <Calendar className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-lg mb-2">Fechas</h3>
-              <p className="text-muted-foreground">11 al 15 de Agosto</p>
-              <p className="text-sm text-muted-foreground mt-1">5 días intensivos</p>
+            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group cursor-pointer"
+                 onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}>
+              <Calendar className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 group-hover:text-primary transition-all duration-300" />
+              <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Fechas</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors">11 al 15 de Agosto</p>
+              <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground transition-colors">5 días intensivos</p>
             </div>
             
-            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group">
-              <Clock className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-lg mb-2">Horario</h3>
-              <p className="text-muted-foreground">5:00 PM - 9:30 PM</p>
-              <p className="text-sm text-muted-foreground mt-1">GMT-5 (Hora Perú)</p>
+            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group cursor-pointer"
+                 onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}>
+              <Clock className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 group-hover:text-primary transition-all duration-300" />
+              <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Horario</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors">5:00 PM - 9:30 PM</p>
+              <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground transition-colors">GMT-5 (Hora Perú)</p>
             </div>
             
-            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group">
-              <Video className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 transition-transform" />
-              <h3 className="font-semibold text-lg mb-2">Modalidad</h3>
-              <p className="text-muted-foreground">100% Virtual</p>
-              <p className="text-sm text-muted-foreground mt-1">Google Meet</p>
+            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group cursor-pointer"
+                 onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}>
+              <Video className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 group-hover:text-primary transition-all duration-300" />
+              <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Modalidad</h3>
+              <p className="text-muted-foreground group-hover:text-foreground transition-colors">100% Virtual</p>
+              <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground transition-colors">Google Meet</p>
             </div>
           </div>
 

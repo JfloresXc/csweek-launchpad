@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Lightbulb } from "lucide-react";
+import { Lightbulb, ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const themes = [
   {
@@ -29,6 +30,8 @@ const themes = [
 ];
 
 export const AboutSection = () => {
+  const navigate = useNavigate();
+  
   return (
     <section id="about" className="py-20 px-4 bg-muted/10">
       <div className="container mx-auto">
@@ -69,11 +72,22 @@ export const AboutSection = () => {
 
         {/* Description */}
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
-          <p className="text-lg text-muted-foreground leading-relaxed">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
             Explora las últimas tendencias en tecnología a través de charlas, talleres y retos prácticos. 
             Un evento <span className="text-secondary font-semibold">100% gratuito</span>, virtual y con certificado de participación, 
             abierto a toda la comunidad.
           </p>
+          
+          {/* Learn More Button */}
+          <Button 
+            variant="hero" 
+            size="lg"
+            onClick={() => navigate('/about')}
+            className="animate-glow-pulse group"
+          >
+            Conoce más sobre el evento
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </div>
     </section>

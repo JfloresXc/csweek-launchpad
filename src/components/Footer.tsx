@@ -1,4 +1,5 @@
 import { Linkedin, Instagram, Facebook } from "lucide-react";
+import { TikTokIcon } from "./icons/TikTokIcon";
 
 export const Footer = () => {
   return (
@@ -54,6 +55,14 @@ export const Footer = () => {
                 className="w-12 h-12 bg-gradient-card border border-border rounded-xl flex items-center justify-center text-muted-foreground hover:text-secondary hover:shadow-glow transition-smooth group"
               >
                 <Facebook className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+              <a
+                href="https://www.tiktok.com/@csweekperu?_t=ZM-8yjxFSQHVBw&_r=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 bg-gradient-card border border-border rounded-xl flex items-center justify-center text-muted-foreground hover:text-secondary hover:shadow-glow transition-smooth group"
+              >
+                <TikTokIcon className="group-hover:scale-110 transition-transform" size={20} />
               </a>
             </div>
           </div>

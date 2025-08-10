@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Users, Star, MapPin, Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, Star, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { EventSpeakersMockService } from '../../event-speakers/services/event-speakers-mock.service';
@@ -167,7 +166,7 @@ export const EventSpeakersSection: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <Card className="group hover:shadow-glow transition-all duration-300 border border-border bg-gradient-card backdrop-blur-sm hover:scale-105 h-full transform-gpu will-change-transform">
-                    <CardContent className="p-6">
+                    <CardContent className="p-8">
                       {/* Speaker Avatar */}
                       <div className="relative mb-6">
                         <div className="absolute inset-0 bg-gradient-to-r from-csweek-primary to-csweek-secondary rounded-full blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
@@ -189,33 +188,15 @@ export const EventSpeakersSection: React.FC = () => {
                         <h3 className="text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
                           {speaker.name}
                         </h3>
-                        <p className="text-secondary font-medium mb-1">{speaker.title}</p>
-                        <p className="text-muted-foreground text-sm mb-3">{speaker.company}</p>
-                        
-                        {/* Track Badge */}
-                        <Badge 
-                          variant="secondary" 
-                          className="bg-csweek-primary/10 text-csweek-primary border-0 mb-3"
-                        >
-                          {speaker.track === 'frontend' && '🎨 Frontend'}
-                          {speaker.track === 'backend' && '⚙️ Backend'}
-                          {speaker.track === 'mobile' && '📱 Mobile'}
-                          {speaker.track === 'ai' && '🤖 AI/ML'}
-                          {speaker.track === 'devops' && '🚀 DevOps'}
-                          {speaker.track === 'general' && '💡 General'}
-                        </Badge>
+                        <p className="text-secondary font-medium mb-3">{speaker.title}</p>
                       </div>
 
                       {/* Bio */}
-                      <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
+                      <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3 text-center">
                         {speaker.bio}
                       </p>
 
-                      {/* Experience Level */}
-                      <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground mb-4">
-                        <Calendar className="w-3 h-3" />
-                        <span className="capitalize">{speaker.experienceLevel} Level</span>
-                      </div>
+
 
                       {/* Social Links */}
                       <div className="flex justify-center gap-3">
