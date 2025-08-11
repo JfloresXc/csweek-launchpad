@@ -51,7 +51,7 @@ export const EVENT_CONFIG = {
     whatsapp: '+51 987 654 321'
   },
 
-  // Tracks tecnológicos
+  // Tracks disponibles
   tracks: [
     'frontend',
     'backend',
@@ -73,7 +73,8 @@ export const EVENT_CONFIG = {
     'Web3 y Blockchain',
     'Calidad de Software',
     'Ciberseguridad',
-    'Innovación y Emprendimiento'
+    'Innovación y Emprendimiento',
+    'Evento Especial'
   ] as const,
 
   // Niveles de experiencia
@@ -83,7 +84,7 @@ export const EVENT_CONFIG = {
     'advanced'
   ] as const,
 
-  // Tipos de sesión
+  // Tipos de sesiones
   sessionTypes: [
     'keynote',
     'talk',
@@ -91,6 +92,7 @@ export const EVENT_CONFIG = {
     'panel',
     'networking',
     'break',
+    'ceremony'
   ] as const
 } as const;
 

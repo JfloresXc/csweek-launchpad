@@ -84,103 +84,103 @@ event-launchpad/
 │   │   │   └── event-location.ts# Ubicación y venue
 │   │   ├── event-speakers/      # 🎯 DOMINIO: Speakers del evento
 │   │   │   ├── components/
-│   │   │   │   ├── EventSpeakerCard.tsx
-│   │   │   │   ├── EventSpeakerGrid.tsx
-│   │   │   │   ├── EventSpeakerModal.tsx
-│   │   │   │   └── EventFeaturedSpeakers.tsx
+│   │   │   │   ├── SpeakerCard.tsx
+│   │   │   │   ├── SpeakerGrid.tsx
+│   │   │   │   ├── SpeakerModal.tsx
+│   │   │   │   └── FeaturedSpeakers.tsx
 │   │   │   ├── hooks/
-│   │   │   │   ├── useEventSpeakers.ts
+│   │   │   │   ├── useSpeakers.ts
 │   │   │   │   └── useSpeakerDetails.ts
 │   │   │   ├── services/
-│   │   │   │   └── event-speakers.service.ts
+│   │   │   │   └── speakers.service.ts
 │   │   │   └── types/
-│   │   │       └── event-speaker.types.ts
+│   │   │       └── speaker.types.ts
 │   │   ├── event-schedule/      # 🎯 DOMINIO: Agenda del evento
 │   │   │   ├── components/
-│   │   │   │   ├── EventScheduleCard.tsx
-│   │   │   │   ├── EventScheduleTimeline.tsx
-│   │   │   │   ├── EventSessionDetails.tsx
-│   │   │   │   └── EventDaySchedule.tsx
+│   │   │   │   ├── ScheduleCard.tsx
+│   │   │   │   ├── ScheduleTimeline.tsx
+│   │   │   │   ├── SessionDetails.tsx
+│   │   │   │   └── DaySchedule.tsx
 │   │   │   ├── hooks/
-│   │   │   │   ├── useEventSchedule.ts
+│   │   │   │   ├── useSchedule.ts
 │   │   │   │   └── useSessionDetails.ts
 │   │   │   ├── services/
-│   │   │   │   └── event-schedule.service.ts
+│   │   │   │   └── schedule.service.ts
 │   │   │   └── types/
-│   │   │       └── event-schedule.types.ts
+│   │   │       └── schedule.types.ts
 │   │   ├── event-sponsors/      # 🎯 DOMINIO: Patrocinadores del evento
 │   │   │   ├── components/
-│   │   │   │   ├── EventSponsorCard.tsx
-│   │   │   │   ├── EventSponsorGrid.tsx
-│   │   │   │   ├── EventSponsorTiers.tsx
-│   │   │   │   └── EventSponsorShowcase.tsx
+│   │   │   │   ├── SponsorCard.tsx
+│   │   │   │   ├── SponsorGrid.tsx
+│   │   │   │   ├── SponsorTiers.tsx
+│   │   │   │   └── SponsorShowcase.tsx
 │   │   │   ├── hooks/
-│   │   │   │   └── useEventSponsors.ts
+│   │   │   │   └── useSponsors.ts
 │   │   │   ├── services/
-│   │   │   │   └── event-sponsors.service.ts
+│   │   │   │   └── sponsors.service.ts
 │   │   │   └── types/
-│   │   │       └── event-sponsor.types.ts
+│   │   │       └── sponsor.types.ts
 │   │   ├── event-communities/   # 🎯 DOMINIO: Comunidades participantes
 │   │   │   ├── components/
-│   │   │   │   ├── EventCommunityCard.tsx
-│   │   │   │   ├── EventCommunityGrid.tsx
-│   │   │   │   └── EventCommunityShowcase.tsx
+│   │   │   │   ├── CommunityCard.tsx
+│   │   │   │   ├── CommunityGrid.tsx
+│   │   │   │   └── CommunityShowcase.tsx
 │   │   │   ├── hooks/
-│   │   │   │   └── useEventCommunities.ts
+│   │   │   │   └── useCommunities.ts
 │   │   │   ├── services/
-│   │   │   │   └── event-communities.service.ts
+│   │   │   │   └── communities.service.ts
 │   │   │   └── types/
-│   │   │       └── event-community.types.ts
+│   │   │       └── community.types.ts
 │   │   ├── event-registration/   # 🎯 DOMINIO: Registro al evento
 │   │   │   ├── components/
-│   │   │   │   ├── EventRegistrationForm.tsx
-│   │   │   │   ├── EventRegistrationModal.tsx
-│   │   │   │   ├── EventRegistrationSuccess.tsx
-│   │   │   │   └── EventRegistrationCTA.tsx
+│   │   │   │   ├── RegistrationForm.tsx
+│   │   │   │   ├── RegistrationModal.tsx
+│   │   │   │   ├── RegistrationSuccess.tsx
+│   │   │   │   └── RegistrationCTA.tsx
 │   │   │   ├── hooks/
-│   │   │   │   ├── useEventRegistration.ts
+│   │   │   │   ├── useRegistration.ts
 │   │   │   │   └── useRegistrationValidation.ts
 │   │   │   ├── services/
-│   │   │   │   └── event-registration.service.ts
+│   │   │   │   └── registration.service.ts
 │   │   │   └── types/
-│   │   │       └── event-registration.types.ts
+│   │   │       └── registration.types.ts
 │   │   ├── event-faqs/          # 🎯 DOMINIO: Preguntas frecuentes del evento
 │   │   │   ├── components/
-│   │   │   │   ├── EventFAQCard.tsx
-│   │   │   │   ├── EventFAQList.tsx
-│   │   │   │   ├── EventFAQAccordion.tsx
-│   │   │   │   └── EventFAQSearch.tsx
+│   │   │   │   ├── FAQCard.tsx
+│   │   │   │   ├── FAQList.tsx
+│   │   │   │   ├── FAQAccordion.tsx
+│   │   │   │   └── FAQSearch.tsx
 │   │   │   ├── hooks/
-│   │   │   │   ├── useEventFAQs.ts
+│   │   │   │   ├── useFAQs.ts
 │   │   │   │   └── useFAQSearch.ts
 │   │   │   ├── services/
-│   │   │   │   └── event-faqs.service.ts
+│   │   │   │   └── faqs.service.ts
 │   │   │   └── types/
-│   │   │       └── event-faq.types.ts
+│   │   │       └── faq.types.ts
 │   │   └── event-landing/       # 🎯 DOMINIO: Landing page del evento
 │   │       ├── sections/        # Secciones principales de la landing
-│   │       │   ├── EventHeroSection.tsx
-│   │       │   ├── EventAboutSection.tsx
-│   │       │   ├── EventSpeakersSection.tsx
-│   │       │   ├── EventScheduleSection.tsx
-│   │       │   ├── EventSponsorsSection.tsx
-│   │       │   ├── EventCommunitiesSection.tsx
-│   │       │   ├── EventRegistrationSection.tsx
-│   │       │   └── EventFAQsSection.tsx
+│   │       │   ├── HeroSection.tsx
+│   │       │   ├── AboutSection.tsx
+│   │       │   ├── SpeakersSection.tsx
+│   │       │   ├── ScheduleSection.tsx
+│   │       │   ├── SponsorsSection.tsx
+│   │       │   ├── CommunitiesSection.tsx
+│   │       │   ├── RegistrationSection.tsx
+│   │       │   └── FAQsSection.tsx
 │   │       ├── pages/           # Páginas específicas del evento
-│   │       │   ├── EventHomePage.tsx
-│   │       │   ├── EventSpeakersPage.tsx
-│   │       │   ├── EventSpeakerDetailPage.tsx
-│   │       │   ├── EventSchedulePage.tsx
-│   │       │   ├── EventSponsorsPage.tsx
-│   │       │   ├── EventCommunitiesPage.tsx
-│   │       │   ├── EventRegisterPage.tsx
-│   │       │   ├── EventFAQsPage.tsx
-│   │       │   └── EventNotFoundPage.tsx
+│   │       │   ├── HomePage.tsx
+│   │       │   ├── SpeakersPage.tsx
+│   │       │   ├── SpeakerDetailPage.tsx
+│   │       │   ├── SchedulePage.tsx
+│   │       │   ├── SponsorsPage.tsx
+│   │       │   ├── CommunitiesPage.tsx
+│   │       │   ├── RegisterPage.tsx
+│   │       │   ├── FAQsPage.tsx
+│   │       │   └── NotFoundPage.tsx
 │   │       └── layouts/
-│   │           ├── EventMainLayout.tsx
-│   │           ├── EventPageLayout.tsx
-│   │           └── EventLayout.tsx
+│   │           ├── MainLayout.tsx
+│   │           ├── PageLayout.tsx
+│   │           └── Layout.tsx
 │   ├── shared/         # Componentes y utilidades compartidas
 │   │   ├── ui/                  # shadcn/ui components base
 │   │   ├── layout/
@@ -242,8 +242,8 @@ event-launchpad/
 
 ```typescript
 // Rutas básicas del proyecto
-/                           -> Landing page principal del evento (EventHomePage)
-/404                        -> Página no encontrada (EventNotFoundPage)
+/                           -> Landing page principal del evento (HomePage)
+/404                        -> Página no encontrada (NotFoundPage)
 ```
 
 ### 🏗️ Arquitectura de Rutas Simplificada
@@ -272,9 +272,6 @@ Por el momento, el proyecto mantendrá una estructura de rutas mínima:
 ```typescript
 // Endpoints para speakers del evento
 GET /api/event/speakers              -> Lista de speakers del evento
-GET /api/event/speakers/:id          -> Detalle de speaker específico
-GET /api/event/speakers/featured     -> Speakers destacados
-GET /api/event/speakers/keynote      -> Keynote speakers
 
 // Query Parameters para /api/event/speakers
 // ?limit=10                          -> Límite de resultados (por defecto: 10)
@@ -282,8 +279,8 @@ GET /api/event/speakers/keynote      -> Keynote speakers
 // ?page=1                            -> Número de página (por defecto: 1)
 
 // Estructura de respuesta de la API
-interface EventSpeakersResponse {
-  docs: EventSpeaker[];
+interface Speaker {
+  docs: Speaker[];
   totalDocs: number;
   limit: number;
   totalPages: number;
@@ -295,7 +292,7 @@ interface EventSpeakersResponse {
   nextPage: number | null;
 }
 
-interface EventSpeaker {
+interface Speaker {
   id: string;
   event: string;                    // ID del evento
   name: string;
@@ -326,10 +323,6 @@ interface EventSpeaker {
 ```typescript
 // Endpoints para agenda del evento
 GET /api/event/schedule              -> Agenda completa del evento
-GET /api/event/schedule/day/:date    -> Agenda por día específico
-GET /api/event/sessions/:id          -> Detalle de sesión específica
-GET /api/event/schedule/track/:track -> Sesiones por track tecnológico
-GET /api/event/schedule/live         -> Sesiones en vivo ahora
 
 // Query Parameters para /api/event/schedule
 // ?limit=10                          -> Límite de resultados (por defecto: 10)
@@ -337,8 +330,8 @@ GET /api/event/schedule/live         -> Sesiones en vivo ahora
 // ?page=1                            -> Número de página (por defecto: 1)
 
 // Estructura de respuesta de la API
-interface EventScheduleResponse {
-  docs: EventSession[];
+interface ScheduleResponse {
+  docs: Session[];
   totalDocs: number;
   limit: number;
   totalPages: number;
@@ -350,7 +343,7 @@ interface EventScheduleResponse {
   nextPage: number | null;
 }
 
-interface EventSession {
+interface Session {
   id: string;
   event: string;                    // ID del evento
   title: string;
@@ -360,12 +353,12 @@ interface EventSession {
   endTime: string;
   date: string;
   room: string;
-  eventSpeakers: string[]; // IDs de speakers del evento
+  speakers: string[]; // IDs de speakers del evento
   tags: string[];
   level: 'beginner' | 'intermediate' | 'advanced';
   track: 'frontend' | 'backend' | 'mobile' | 'ai' | 'devops' | 'general';
   isLive: boolean;
-  eventDay: 1 | 2 | 3; // Día del evento
+  day: 1 | 2 | 3; // Día del evento
   registrationRequired: boolean;
   order?: number;                   // Orden en la agenda
   isActive?: boolean;               // Si está activa
@@ -379,8 +372,6 @@ interface EventSession {
 ```typescript
 // Endpoints para sponsors del evento
 GET /api/event/sponsors              -> Lista de sponsors del evento
-GET /api/event/sponsors/tier/:tier   -> Sponsors por nivel
-GET /api/event/sponsors/featured     -> Sponsors destacados
 
 // Query Parameters para /api/event/sponsors
 // ?limit=10                          -> Límite de resultados (por defecto: 10)
@@ -388,8 +379,8 @@ GET /api/event/sponsors/featured     -> Sponsors destacados
 // ?page=1                            -> Número de página (por defecto: 1)
 
 // Estructura de respuesta de la API
-interface EventSponsorsResponse {
-  docs: EventSponsor[];
+interface SponsorsResponse {
+  docs: Sponsor[];
   totalDocs: number;
   limit: number;
   totalPages: number;
@@ -401,7 +392,7 @@ interface EventSponsorsResponse {
   nextPage: number | null;
 }
 
-interface EventSponsor {
+interface Sponsor {
   id: string;
   event: string;                    // ID del evento
   name: string;
@@ -434,8 +425,6 @@ interface EventSponsor {
 ```typescript
 // Endpoints para comunidades del evento
 GET /api/event/communities           -> Lista de comunidades del evento
-GET /api/event/communities/featured  -> Comunidades destacadas
-GET /api/event/communities/local     -> Comunidades locales participantes
 
 // Query Parameters para /api/event/communities
 // ?limit=10                          -> Límite de resultados (por defecto: 10)
@@ -443,8 +432,8 @@ GET /api/event/communities/local     -> Comunidades locales participantes
 // ?page=1                            -> Número de página (por defecto: 1)
 
 // Estructura de respuesta de la API
-interface EventCommunitiesResponse {
-  docs: EventCommunity[];
+interface CommunitiesResponse {
+  docs: Community[];
   totalDocs: number;
   limit: number;
   totalPages: number;
@@ -456,7 +445,7 @@ interface EventCommunitiesResponse {
   nextPage: number | null;
 }
 
-interface EventCommunity {
+interface Community {
   id: string;
   event: string;                    // ID del evento
   name: string;
@@ -472,10 +461,10 @@ interface EventCommunity {
     youtube?: string;
   };
   memberCount: number;
-  eventRole: 'organizer' | 'sponsor' | 'partner' | 'participant';
+  role: 'organizer' | 'sponsor' | 'partner' | 'participant';
   featured: boolean;
   local: boolean;
-  eventActivities?: string[]; // Actividades en el evento
+  activities?: string[]; // Actividades en el evento
   establishedYear?: number;
   focus: string[]; // Áreas de enfoque tecnológico
   order?: number;                   // Orden de visualización
@@ -490,11 +479,6 @@ interface EventCommunity {
 ```typescript
 // Endpoints para el evento y registro
 GET /api/event/info                 -> Información general del evento
-POST /api/event/registrations        -> Crear nuevo registro
-GET /api/event/registrations         -> Obtener registros (admin)
-GET /api/event/registrations/stats   -> Estadísticas públicas
-GET /api/event/countdown       -> Countdown hasta el evento
-GET /api/event/live-status     -> Estado en vivo del evento
 
 // Query Parameters para /api/event/registrations
 // ?limit=10                          -> Límite de resultados (por defecto: 10)
@@ -502,7 +486,7 @@ GET /api/event/live-status     -> Estado en vivo del evento
 // ?page=1                            -> Número de página (por defecto: 1)
 
 // Estructura de respuesta para POST /api/event/registrations
-interface EventRegistrationResponse {
+interface RegistrationResponse {
   success: boolean;
   message: string;
   data?: {
@@ -608,8 +592,6 @@ interface EventRegistration {
 ```typescript
 // Endpoints para preguntas frecuentes del evento
 GET /api/event/faqs                  -> Lista de FAQs del evento
-GET /api/event/faqs/search           -> Búsqueda en FAQs
-GET /api/event/faqs/category/:cat    -> FAQs por categoría
 
 // Query Parameters para /api/event/faqs
 // ?limit=10                          -> Límite de resultados (por defecto: 10)
@@ -617,8 +599,8 @@ GET /api/event/faqs/category/:cat    -> FAQs por categoría
 // ?page=1                            -> Número de página (por defecto: 1)
 
 // Estructura de respuesta de la API
-interface EventFAQsResponse {
-  docs: EventFAQ[];
+interface FAQsResponse {
+  docs: FAQ[];
   totalDocs: number;
   limit: number;
   totalPages: number;
@@ -630,7 +612,7 @@ interface EventFAQsResponse {
   nextPage: number | null;
 }
 
-interface EventFAQ {
+interface FAQ {
   id: string;
   event: string;                    // ID del evento
   question: string;                 // Pregunta
@@ -822,15 +804,6 @@ interface EventFAQ {
 - **Error Handling**: Páginas de error personalizadas
 - **Loading States**: Skeletons y spinners para mejor UX
 
-## 🔧 Configuración y Variables de Entorno
-
-```bash
-# .env.local
-VITE_API_BASE_URL=https://api.csweek2025.com
-VITE_GOOGLE_ANALYTICS_ID=G-XXXXXXXXXX
-VITE_SENTRY_DSN=https://xxx@sentry.io/xxx
-VITE_APP_NAME="CS WEEK 2025"
-```
 
 ## 🧪 Testing y Calidad
 

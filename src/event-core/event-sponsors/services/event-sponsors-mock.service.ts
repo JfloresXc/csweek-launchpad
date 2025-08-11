@@ -30,7 +30,6 @@ const mockSponsors: EventSponsor[] = [
     socialLinks: {
       twitter: 'https://twitter.com/jamdiazdiaz',
       linkedin: 'https://linkedin.com/in/jamdiazdiaz',
-      github: 'https://github.com/joedayz'
     },
     contact: {
       email: 'info@joedayz.pe',
@@ -47,6 +46,41 @@ const mockSponsors: EventSponsor[] = [
     isActive: true,
     createdAt: '2024-01-15T10:00:00Z',
     updatedAt: '2024-01-15T10:00:00Z'
+  },
+  {
+    id: '2',
+    name: 'Futura',
+    description: 'Somos más que expertos; somos socios en la evolución empresarial, transformando datos en decisiones estratégicas y oportunidades tangibles para el crecimiento sostenible. Con más de una década perfeccionando soluciones analíticas efectivas, ofrecemos capacitaciones exclusivas en Analítica Avanzada y Ciencia de datos con mentores de primera clase.',
+    logo: '/assets/sponsors/futura.png',
+    website: 'https://futuradata.pe',
+    tier: 'silver',
+    category: 'education',
+    featured: false,
+    benefits: [
+      'Stand educativo especializado',
+      'Workshop de Analítica Avanzada y Ciencia de Datos',
+      'Logo en materiales del evento',
+      'Acceso para representantes',
+      'Networking con profesionales de datos'
+    ],
+    socialLinks: {
+      linkedin: 'https://linkedin.com/company/futura-data'
+    },
+    contact: {
+      email: 'info@futuradata.pe',
+      representative: 'Equipo Futura'
+    },
+    booth: {
+      number: 'B2',
+      location: 'Zona educación',
+      size: '3x3 metros'
+    },
+    sponsorshipValue: 15000,
+    startDate: '2025-03-01T00:00:00Z',
+    endDate: '2025-03-31T23:59:59Z',
+    isActive: true,
+    createdAt: '2024-01-20T10:00:00Z',
+    updatedAt: '2024-01-20T10:00:00Z'
   }
 ];
 
@@ -60,32 +94,32 @@ export class EventSponsorsMockService {
   // Obtener lista de sponsors del evento
   static async getEventSponsors(params: EventSponsorsQueryParams = {}): Promise<EventSponsorsResponse> {
     await this.delay();
-    
+
     const { limit = 10, page = 1, sort = 'tier', tier, category, featured, search } = params;
-    
+
     // Aplicar filtros
     let filteredSponsors = [...mockSponsors];
-    
+
     if (tier) {
       filteredSponsors = filteredSponsors.filter(sponsor => sponsor.tier === tier);
     }
-    
+
     if (category) {
       filteredSponsors = filteredSponsors.filter(sponsor => sponsor.category === category);
     }
-    
+
     if (featured !== undefined) {
       filteredSponsors = filteredSponsors.filter(sponsor => sponsor.featured === featured);
     }
-    
+
     if (search) {
       const searchLower = search.toLowerCase();
-      filteredSponsors = filteredSponsors.filter(sponsor => 
+      filteredSponsors = filteredSponsors.filter(sponsor =>
         sponsor.name.toLowerCase().includes(searchLower) ||
         sponsor.description.toLowerCase().includes(searchLower)
       );
     }
-    
+
     // Aplicar ordenamiento
     const tierOrder: Record<SponsorTier, number> = {
       platinum: 1,
@@ -95,7 +129,7 @@ export class EventSponsorsMockService {
       community: 5,
       media: 6
     };
-    
+
     switch (sort) {
       case 'name':
         filteredSponsors.sort((a, b) => a.name.localeCompare(b.name));
@@ -110,21 +144,21 @@ export class EventSponsorsMockService {
         filteredSponsors.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
         break;
     }
-    
+
     // Aplicar paginación
     const startIndex = (page - 1) * limit;
     const endIndex = startIndex + limit;
     const paginatedSponsors = filteredSponsors.slice(startIndex, endIndex);
-    
+
     const total = filteredSponsors.length;
     const totalPages = Math.ceil(total / limit);
-    
+
     // Calcular estadísticas
     const sponsorsByTier = mockSponsors.reduce((acc, sponsor) => {
       acc[sponsor.tier] = (acc[sponsor.tier] || 0) + 1;
       return acc;
     }, {} as Record<SponsorTier, number>);
-    
+
     return {
       sponsors: paginatedSponsors,
       pagination: {
@@ -142,23 +176,23 @@ export class EventSponsorsMockService {
       }
     };
   }
-  
+
   // Obtener sponsor específico por ID
   static async getEventSponsorById(id: string): Promise<EventSponsor> {
     await this.delay();
-    
+
     const sponsor = mockSponsors.find(s => s.id === id);
     if (!sponsor) {
       throw new Error(`Sponsor with ID ${id} not found`);
     }
-    
+
     return sponsor;
   }
-  
+
   // Obtener sponsors destacados
   static async getFeaturedEventSponsors(): Promise<FeaturedEventSponsor[]> {
     await this.delay();
-    
+
     return mockSponsors
       .filter(sponsor => sponsor.featured)
       .map(sponsor => ({
@@ -168,28 +202,28 @@ export class EventSponsorsMockService {
         specialOffer: 'Descuentos especiales para participantes del evento'
       }));
   }
-  
+
   // Obtener sponsors por tier
   static async getEventSponsorsByTier(tier: SponsorTier): Promise<EventSponsor[]> {
     await this.delay();
-    
+
     return mockSponsors.filter(sponsor => sponsor.tier === tier);
   }
-  
+
   // Obtener estadísticas de sponsors
   static async getEventSponsorsStats(): Promise<EventSponsorsStats> {
     await this.delay();
-    
+
     const sponsorsByTier = mockSponsors.reduce((acc, sponsor) => {
       acc[sponsor.tier] = (acc[sponsor.tier] || 0) + 1;
       return acc;
     }, {} as Record<SponsorTier, number>);
-    
+
     const sponsorsByCategory = mockSponsors.reduce((acc, sponsor) => {
       acc[sponsor.category] = (acc[sponsor.category] || 0) + 1;
       return acc;
     }, {} as Record<SponsorCategory, number>);
-    
+
     return {
       totalSponsors: mockSponsors.length,
       sponsorsByTier,

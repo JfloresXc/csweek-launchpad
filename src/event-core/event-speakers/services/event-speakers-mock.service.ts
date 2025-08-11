@@ -301,7 +301,7 @@ const mockSpeakers: EventSpeaker[] = [
     "title": "Cloud Architect",
     "company": "PUCP",
     "bio": "Cloud Architect | Java Champion | PeruJUG Founder | PUCP",
-    "avatar": "/assets/speakers/Jose-Amadeo-Diaz-Diaz.jpg",
+    "avatar": "/assets/speakers/Jose-Amadeo-Diaz-Diaz.png",
     "social": {
       "twitter": "https://twitter.com/joseadiaz",
       "linkedin": "https://linkedin.com/in/joseadiaz",
@@ -345,7 +345,7 @@ const mockSpeakers: EventSpeaker[] = [
     "title": "Founder & CEO",
     "company": "Help Business Peru Unidos",
     "bio": "Founder & CEO Help Business Peru Unidos | Auditor en Sistemas de seguridad y redes | UTP",
-    "avatar": "/assets/speakers/Juan-Alberto-Contreras-Flores.jpg",
+    "avatar": "/assets/speakers/Juan-Alberto-Contreras-Flores.png",
     "social": {
       "twitter": "https://twitter.com/juancontreras",
       "linkedin": "https://linkedin.com/in/juancontreras",
@@ -356,6 +356,94 @@ const mockSpeakers: EventSpeaker[] = [
     "track": "cybersecurity",
     "experienceLevel": "advanced",
     "order": 16,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "17",
+    "event": "csweek-2025",
+    "name": "Renzo Roca",
+    "title": "Software Developer",
+    "company": "Tech Company",
+    "bio": "Software Developer especializado en desarrollo web y tecnologías modernas",
+    "avatar": "/assets/speakers/renzo-roca.png",
+    "social": {
+      "twitter": "https://twitter.com/renzoroca",
+      "linkedin": "https://linkedin.com/in/renzoroca",
+      "github": "https://github.com/renzoroca"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "frontend",
+    "experienceLevel": "intermediate",
+    "order": 17,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "18",
+    "event": "csweek-2025",
+    "name": "Andrés David Escobar Villa",
+    "title": "Full Stack Developer",
+    "company": "Tech Solutions",
+    "bio": "Full Stack Developer con experiencia en desarrollo web y aplicaciones móviles",
+    "avatar": "/assets/speakers/Andrés-David-Escobar-Villa.png",
+    "social": {
+      "twitter": "https://twitter.com/andresescobarvilla",
+      "linkedin": "https://linkedin.com/in/andresescobarvilla",
+      "github": "https://github.com/andresescobarvilla"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "fullstack",
+    "experienceLevel": "intermediate",
+    "order": 18,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "19",
+    "event": "csweek-2025",
+    "name": "Giancarlos Enrique Sandoval Tume",
+    "title": "Software Engineer",
+    "company": "Innovation Labs",
+    "bio": "Software Engineer especializado en arquitectura de software y desarrollo backend",
+    "avatar": "/assets/speakers/Giancarlos Enrique Sandoval Tume.png",
+    "social": {
+      "twitter": "https://twitter.com/giancarlosandoval",
+      "linkedin": "https://linkedin.com/in/giancarlosandoval",
+      "github": "https://github.com/giancarlosandoval"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "backend",
+    "experienceLevel": "intermediate",
+    "order": 19,
+    "isActive": true,
+    "createdAt": "2025-08-01T10:00:00Z",
+    "updatedAt": "2025-08-01T10:00:00Z"
+  },
+  {
+    "id": "20",
+    "event": "csweek-2025",
+    "name": "Jose Miranda",
+    "title": "DevOps Engineer",
+    "company": "Cloud Solutions",
+    "bio": "DevOps Engineer especializado en infraestructura cloud y automatización",
+    "avatar": "/assets/speakers/jose-miranda.png",
+    "social": {
+      "twitter": "https://twitter.com/josemiranda",
+      "linkedin": "https://linkedin.com/in/josemiranda",
+      "github": "https://github.com/josemiranda"
+    },
+    "featured": false,
+    "keynote": false,
+    "track": "devops",
+    "experienceLevel": "intermediate",
+    "order": 20,
     "isActive": true,
     "createdAt": "2025-08-01T10:00:00Z",
     "updatedAt": "2025-08-01T10:00:00Z"

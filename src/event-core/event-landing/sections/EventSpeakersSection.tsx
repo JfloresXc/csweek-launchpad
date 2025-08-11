@@ -19,8 +19,8 @@ export const EventSpeakersSection: React.FC = () => {
   const [error, setError] = React.useState<string | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
    
-   // Mostrar solo 6 speakers en el carrusel
-   const carouselSpeakers = speakers.slice(0, 6);
+   // Mostrar todos los speakers en el carrusel
+   const carouselSpeakers = speakers;
    
    // Responsive speakers per view
    const [speakersPerView, setSpeakersPerView] = useState(3);
@@ -62,9 +62,9 @@ export const EventSpeakersSection: React.FC = () => {
     const loadSpeakers = async () => {
       try {
         setLoading(true);
-        // Obtener todos los speakers y mostrar solo 6 en el carousel
-        const allSpeakers = await EventSpeakersMockService.getEventSpeakers({ limit: 100 });
-        setSpeakers(allSpeakers.docs.slice(0, 6)); // Mostrar solo 6 speakers en el carousel
+        // Obtener todos los speakers para el carousel (sin límite)
+        const allSpeakers = await EventSpeakersMockService.getEventSpeakers({ limit: 50 });
+        setSpeakers(allSpeakers.docs); // Mostrar todos los speakers en el carousel
       } catch (err) {
         setError('Error al cargar los speakers');
         console.error('Error loading speakers:', err);

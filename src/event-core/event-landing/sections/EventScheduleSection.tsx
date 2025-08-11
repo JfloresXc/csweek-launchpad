@@ -553,8 +553,8 @@ const SessionDetailModal: React.FC<SessionDetailModalProps> = ({ session, isOpen
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto max-h-[calc(90vh-140px)]">
-          <div className="p-6 space-y-6">
+        <div className="overflow-y-auto max-h-[calc(90vh-140px)] scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
+          <div className="p-6 pb-8 space-y-6">
             {/* Date, Time and Room Info */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="flex items-center gap-3 p-3 bg-muted/30 rounded-lg">
@@ -648,8 +648,6 @@ const SessionDetailModal: React.FC<SessionDetailModalProps> = ({ session, isOpen
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   );
