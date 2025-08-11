@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Globe, Users, BookOpen, Mic, Lightbulb, Zap, Instagram, Twitter, Linkedin } from "lucide-react";
+import { ArrowLeft, Globe, Users, BookOpen, Mic, Lightbulb, Zap, Instagram, Facebook, Linkedin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { TikTokIcon } from "@/components/icons/TikTokIcon";
 
@@ -154,25 +154,7 @@ const About = () => {
             </p>
             <div className="flex justify-center gap-4 flex-wrap">
               <a 
-                href="https://www.instagram.com/csweekperu/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm font-medium"
-              >
-                <Instagram size={16} />
-                Instagram
-              </a>
-              <a 
-                href="https://twitter.com/csweekperu" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-400 to-blue-600 text-white rounded-lg hover:from-blue-500 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm font-medium"
-              >
-                <Twitter size={16} />
-                Twitter
-              </a>
-              <a 
-                href="https://www.linkedin.com/company/csweekperu/" 
+                href="https://www.linkedin.com/company/cs-week-per%C3%BA-2025/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg hover:from-blue-700 hover:to-blue-900 transition-all duration-300 transform hover:scale-105 text-sm font-medium"
@@ -181,12 +163,30 @@ const About = () => {
                 LinkedIn
               </a>
               <a 
-                href="https://www.tiktok.com/@csweekperu" 
+                href="https://www.instagram.com/csweekperu?igsh=NWQ3d2Y1ZGxkbzNy" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-sm font-medium"
+              >
+                <Instagram size={16} />
+                Instagram
+              </a>
+              <a 
+                href="https://www.facebook.com/share/1AiNyVUL1d/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg hover:from-blue-600 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 text-sm font-medium"
+              >
+                <Facebook size={16} />
+                Facebook
+              </a>
+              <a 
+                href="https://www.tiktok.com/@csweekperu?_t=ZM-8yjxFSQHVBw&_r=1" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-gray-800 to-black text-white rounded-lg hover:from-gray-900 hover:to-gray-800 transition-all duration-300 transform hover:scale-105 text-sm font-medium"
               >
-                <TikTokIcon className="w-4 h-4" />
+                <TikTokIcon size={16} />
                 TikTok
               </a>
             </div>

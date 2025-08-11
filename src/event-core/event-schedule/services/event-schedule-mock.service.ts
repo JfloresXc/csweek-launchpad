@@ -122,6 +122,28 @@ const mockSessions: EventSession[] = [
     "updatedAt": "2025-08-09T21:30:00Z"
   },
   {
+    "id": "6",
+    "event": "tech-summit-2025",
+    "title": "Dinámicas y retos",
+    "description": "Dinámicas y presentación de retos para el certificado final",
+    "type": "workshop",
+    "startTime": "17:00",
+    "endTime": "17:30",
+    "date": "2025-08-12",
+    "room": "Google Meet",
+    "eventSpeakers": [],
+    "tags": ["Dinámicas", "Retos", "Certificado"],
+    "level": "beginner",
+    "track": "Desarrollo Profesional",
+    "isLive": true,
+    "eventDay": 2,
+    "registrationRequired": false,
+    "order": 5,
+    "isActive": true,
+    "createdAt": "2025-08-09T21:30:00Z",
+    "updatedAt": "2025-08-09T21:30:00Z"
+  },
+  {
     "id": "5",
     "event": "tech-summit-2025",
     "title": "Web osintomáticas",
@@ -144,7 +166,7 @@ const mockSessions: EventSession[] = [
     "updatedAt": "2025-08-09T21:30:00Z"
   },
   {
-    "id": "6",
+    "id": "6b",
     "event": "tech-summit-2025",
     "title": "Introducción a Model Context Protocol (MCP) y Function Calling",
     "description": "Se hablará sobre la evolución de la integración de IA generativa en sistemas, y específicamente, como es que funciona MCP y una alternativa no muy popular llamada Function Calling de Google. La charla mostrará experimentos en vivo.",

@@ -46,7 +46,12 @@ export const RegisterSection = () => {
             </div>
             
             <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group cursor-pointer"
-                 onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}>
+                 onClick={() => {
+                   const scheduleSection = document.getElementById('schedule');
+                   if (scheduleSection) {
+                     scheduleSection.scrollIntoView({ behavior: 'smooth' });
+                   }
+                 }}>
               <Clock className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 group-hover:text-primary transition-all duration-300" />
               <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Horario</h3>
               <p className="text-muted-foreground group-hover:text-foreground transition-colors">5:00 PM - 9:30 PM</p>
