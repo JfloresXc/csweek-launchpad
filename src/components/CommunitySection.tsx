@@ -71,9 +71,9 @@ export const CommunitySection = () => {
   // Comunidades adicionales
   const additionalCommunities = [
     {
-      name: "AAII",
+      name: "AAII PUCP",
       logo: "/assets/communities/aaii.jpg",
-      description: "Asociación Argentina de Inteligencia Artificial",
+      description: "Asociación de Alumnos y Egresados de Ingeniería Informática de la PUCP",
       url: "https://www.aaii.org.ar/",
     },
     {
