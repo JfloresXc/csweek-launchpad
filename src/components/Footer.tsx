@@ -79,7 +79,7 @@ export const Footer = () => {
         {/* Bottom Border */}
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            Hecho con ❤️ por la comunidad IEEE Computer Society Perú
+            Hecho con ❤️ por la comunidad estudiantil IEEE Computer Society Perú
           </p>
         </div>
       </div>
