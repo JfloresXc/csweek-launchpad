@@ -58,12 +58,11 @@ export const RegisterSection = () => {
               <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground transition-colors">GMT-5 (Hora Perú)</p>
             </div>
             
-            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card hover:shadow-elevation transition-smooth group cursor-pointer"
-                 onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}>
-              <Video className="w-8 h-8 text-secondary mb-4 mx-auto group-hover:scale-110 group-hover:text-primary transition-all duration-300" />
-              <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">Modalidad</h3>
-              <p className="text-muted-foreground group-hover:text-foreground transition-colors">100% Virtual</p>
-              <p className="text-sm text-muted-foreground mt-1 group-hover:text-foreground transition-colors">Google Meet</p>
+            <div className="bg-gradient-card border border-border rounded-xl p-6 shadow-card">
+              <Video className="w-8 h-8 text-secondary mb-4 mx-auto" />
+              <h3 className="font-semibold text-lg mb-2">Modalidad</h3>
+              <p className="text-muted-foreground">100% Virtual</p>
+              <p className="text-sm text-muted-foreground mt-1">Zoom</p>
             </div>
           </div>
 

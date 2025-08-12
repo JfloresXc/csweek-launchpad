@@ -577,20 +577,9 @@ const SessionDetailModal: React.FC<SessionDetailModalProps> = ({ session, isOpen
                   <MapPin className="h-5 w-5 text-csweek-primary" />
                   <div className="flex-1">
                     <p className="text-xs text-muted-foreground font-medium">Sala</p>
-                    {session.room === 'Google Meet' ? (
-                      <button
-                        onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}
-                        className="text-sm font-semibold text-csweek-primary hover:text-csweek-primary/80 transition-colors underline cursor-pointer"
-                      >
-                        {session.room}
-                      </button>
-                    ) : (
-                      <p className="text-sm font-semibold">{session.room}</p>
-                    )}
+                    <p className="text-sm font-semibold">{session.room}</p>
                   </div>
-                  {session.room === 'Google Meet' && (
-                    <ExternalLink className="h-4 w-4 text-csweek-primary" />
-                  )}
+
                 </div>
               )}
             </div>

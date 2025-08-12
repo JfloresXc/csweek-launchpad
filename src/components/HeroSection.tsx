@@ -57,14 +57,12 @@ export const HeroSection = () => {
               </div>
             </div>
             
-            <div className="flex items-center gap-3 bg-gradient-card border border-border rounded-lg p-4 shadow-card hover:shadow-elevation transition-smooth cursor-pointer group"
-                 onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}>
-              <Video className="w-5 h-5 text-secondary group-hover:text-primary transition-colors" />
+            <div className="flex items-center gap-3 bg-gradient-card border border-border rounded-lg p-4 shadow-card">
+              <Video className="w-5 h-5 text-secondary" />
               <div className="flex-1">
                 <p className="text-sm text-muted-foreground">Plataforma</p>
-                <p className="font-semibold group-hover:text-primary transition-colors">Google Meet</p>
+                <p className="font-semibold">Zoom</p>
               </div>
-              <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
             </div>
           </div>
 
@@ -84,10 +82,10 @@ export const HeroSection = () => {
                 variant="outline" 
                 size="xl"
                 className="w-full sm:w-auto border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
-                onClick={() => window.open('https://meet.google.com/qfu-edsm-gii?authuser=0', '_blank')}
+                disabled
               >
                 <Video className="w-5 h-5 mr-2" />
-                Unirse al Meet
+                Zoom (Información próximamente)
               </Button>
             </div>
           </div>
