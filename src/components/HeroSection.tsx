@@ -68,24 +68,14 @@ export const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="pt-16 md:pt-8 space-y-4">
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex justify-center">
               <Button 
                 variant="hero" 
                 size="xl"
-                className="animate-glow-pulse w-full sm:w-auto"
+                className="animate-glow-pulse"
                 onClick={() => window.open('https://lu.ma/alaqbwzh?fbclid=PAZXh0bgNhZW0CMTEAAadzewIeuJoItjKgJQcFxaT14caJkEyn12FiJxGIEY0HXhxgXxZAmlsuwJsg7Q_aem_n6g6ZINLkRx0bPK5q8spGw', '_blank')}
               >
                 Regístrate ahora
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="xl"
-                className="w-full sm:w-auto border-primary/30 hover:border-primary hover:bg-primary/10 transition-all duration-300"
-                disabled
-              >
-                <Video className="w-5 h-5 mr-2" />
-                Zoom (Información próximamente)
               </Button>
             </div>
           </div>
